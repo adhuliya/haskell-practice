@@ -1,3 +1,4 @@
+-- qsort with list comprehension
 qsort [] = []
 qsort (x:xs) = qsort l ++ [x] ++ qsort r
     where
