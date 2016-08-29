@@ -28,3 +28,15 @@ nodup (x:xs) = x `notElem` xs && nodup xs
 goodseq [] = True
 goodseq (x:[]) = True
 goodseq (x:xs) = head x == (last . head $ xs) && goodseq xs
+
+
+---------------------------------------------------------------------------
+-- Correct Solution 2
+---------------------------------------------------------------------------
+
+wordbuilding2 d = map reverse . concat . map (genseq d) . map (:[]) $ d
+
+genseq d l@(x:xs) | null nxt = l:[]
+                  | otherwise = concat . map (genseq d) . map (:l) $ nxt
+  where
+    nxt = [w | w <- d, head w == last x, w `notElem` l]
