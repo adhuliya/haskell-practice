@@ -40,3 +40,4 @@ genseq d l@(x:xs) | null nxt = l:[]
                   | otherwise = concat . map (genseq d) . map (:l) $ nxt
   where
     nxt = [w | w <- d, head w == last x, w `notElem` l]
+
