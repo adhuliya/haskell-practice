@@ -16,3 +16,8 @@ hstyle = Bnode (Bnode (Bnode (Leaf 'f') (Bnode (Bnode (Leaf 'g') (Leaf 'x')) (Le
 
 gtob (Gnode x []) = Leaf x
 gtob (Gnode x l@(y:ys)) = Bnode (gtob (Gnode x (init l))) (gtob (last l))
+
+btog (Leaf x) = Gnode x []
+btog (Bnode t1 t2) = (btog t1) `addChild` (btog t2)
+  where
+    addChild (Gnode x y) t = Gnode x (y ++ [t])
