@@ -19,3 +19,7 @@ takeWhilel p l = foldl f [] l
   where
     f acc a | p a = acc++[a]
             | otherwise = acc
+
+taken n [] = []
+taken 0 xs = []
+taken n (x:xs) = x : taken (n-1) xs
