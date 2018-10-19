@@ -1,0 +1,131 @@
+Glasgow Haskell Compiler, Version 8.0.2, stage 2 booted by GHC version 8.0.2
+Using binary package database: /usr/lib/ghc/package.conf.d/package.cache
+Using binary package database: /home/codeman/.ghc/x86_64-linux-8.0.2/package.conf.d/package.cache
+loading package database /usr/lib/ghc/package.conf.d
+loading package database /home/codeman/.ghc/x86_64-linux-8.0.2/package.conf.d
+wired-in package ghc-prim mapped to ghc-prim-0.5.0.0
+wired-in package integer-gmp mapped to integer-gmp-1.0.0.1
+wired-in package base mapped to base-4.9.1.0
+wired-in package rts mapped to rts
+wired-in package template-haskell mapped to template-haskell-2.11.1.0
+wired-in package ghc mapped to ghc-8.0.2
+wired-in package dph-seq not found.
+wired-in package dph-par not found.
+Hsc static flags: 
+loading package database /usr/lib/ghc/package.conf.d
+loading package database /home/codeman/.ghc/x86_64-linux-8.0.2/package.conf.d
+wired-in package ghc-prim mapped to ghc-prim-0.5.0.0
+wired-in package integer-gmp mapped to integer-gmp-1.0.0.1
+wired-in package base mapped to base-4.9.1.0
+wired-in package rts mapped to rts-1.0
+wired-in package template-haskell mapped to template-haskell-2.11.1.0
+wired-in package ghc mapped to ghc-8.0.2
+wired-in package dph-seq not found.
+wired-in package dph-par not found.
+*** Chasing dependencies:
+Chasing modules from: *main.hs
+!!! Chasing dependencies: finished in 1.28 milliseconds, allocated 0.550 megabytes
+Stable obj: []
+Stable BCO: []
+Ready for upsweep
+  [NONREC
+      ModSummary {
+         ms_hs_date = 2018-09-23 15:12:46.548071682 UTC
+         ms_mod = MyModule.MySum,
+         ms_textual_imps = [(Nothing, Prelude), (Nothing, Data.List)]
+         ms_srcimps = []
+      },
+   NONREC
+      ModSummary {
+         ms_hs_date = 2018-09-23 15:10:18.160062807 UTC
+         ms_mod = Main,
+         ms_textual_imps = [(Nothing, Prelude), (Nothing, MyModule.MySum)]
+         ms_srcimps = []
+      }]
+*** Deleting temp files:
+Deleting: 
+compile: input file ./MyModule/MySum.hs
+*** Checking old interface for MyModule.MySum:
+[1 of 2] Compiling MyModule.MySum   ( MyModule/MySum.hs, MyModule/MySum.o )
+*** Parser [MyModule.MySum]:
+!!! Parser [MyModule.MySum]: finished in 0.18 milliseconds, allocated 0.159 megabytes
+*** Renamer/typechecker [MyModule.MySum]:
+!!! Renamer/typechecker [MyModule.MySum]: finished in 67.04 milliseconds, allocated 24.499 megabytes
+*** Desugar [MyModule.MySum]:
+Result size of Desugar (after optimization)
+  = {terms: 16, types: 17, coercions: 0}
+!!! Desugar [MyModule.MySum]: finished in 0.34 milliseconds, allocated 0.121 megabytes
+*** Simplifier [MyModule.MySum]:
+Result size of Simplifier iteration=1
+  = {terms: 20, types: 19, coercions: 0}
+Result size of Simplifier = {terms: 20, types: 19, coercions: 0}
+!!! Simplifier [MyModule.MySum]: finished in 0.38 milliseconds, allocated 0.194 megabytes
+*** CoreTidy [MyModule.MySum]:
+Result size of Tidy Core = {terms: 20, types: 19, coercions: 0}
+!!! CoreTidy [MyModule.MySum]: finished in 0.12 milliseconds, allocated 0.062 megabytes
+writeBinIface: 1 Names
+writeBinIface: 22 dict entries
+Created temporary directory: /tmp/ghc9b19_0
+*** CorePrep [MyModule.MySum]:
+Result size of CorePrep = {terms: 27, types: 24, coercions: 0}
+!!! CorePrep [MyModule.MySum]: finished in 0.29 milliseconds, allocated 0.129 megabytes
+*** Stg2Stg:
+*** CodeGen [MyModule.MySum]:
+!!! CodeGen [MyModule.MySum]: finished in 2.16 milliseconds, allocated 1.286 megabytes
+*** Assembler:
+/usr/bin/gcc -fno-stack-protector -DTABLES_NEXT_TO_CODE -I./MyModule -x assembler -c /tmp/ghc9b19_0/ghc_2.s -o ./MyModule/MySum.o
+*** Deleting temp files:
+Deleting: /tmp/ghc9b19_0/ghc_3.c /tmp/ghc9b19_0/ghc_2.s /tmp/ghc9b19_0/ghc_1.s
+Warning: deleting non-existent /tmp/ghc9b19_0/ghc_3.c
+Warning: deleting non-existent /tmp/ghc9b19_0/ghc_1.s
+compile: input file main.hs
+*** Checking old interface for Main:
+[2 of 2] Compiling Main             ( main.hs, main.o )
+*** Parser [Main]:
+!!! Parser [Main]: finished in 0.19 milliseconds, allocated 0.145 megabytes
+*** Renamer/typechecker [Main]:
+!!! Renamer/typechecker [Main]: finished in 12.93 milliseconds, allocated 6.968 megabytes
+*** Desugar [Main]:
+Result size of Desugar (after optimization)
+  = {terms: 36, types: 23, coercions: 0}
+!!! Desugar [Main]: finished in 0.36 milliseconds, allocated 0.192 megabytes
+*** Simplifier [Main]:
+Result size of Simplifier iteration=1
+  = {terms: 39, types: 21, coercions: 0}
+Result size of Simplifier = {terms: 39, types: 21, coercions: 0}
+!!! Simplifier [Main]: finished in 0.43 milliseconds, allocated 0.307 megabytes
+*** CoreTidy [Main]:
+Result size of Tidy Core = {terms: 39, types: 21, coercions: 0}
+!!! CoreTidy [Main]: finished in 0.12 milliseconds, allocated 0.071 megabytes
+writeBinIface: 1 Names
+writeBinIface: 20 dict entries
+*** CorePrep [Main]:
+Result size of CorePrep = {terms: 91, types: 52, coercions: 0}
+!!! CorePrep [Main]: finished in 0.22 milliseconds, allocated 0.164 megabytes
+*** Stg2Stg:
+*** CodeGen [Main]:
+!!! CodeGen [Main]: finished in 3.47 milliseconds, allocated 2.535 megabytes
+*** Assembler:
+/usr/bin/gcc -fno-stack-protector -DTABLES_NEXT_TO_CODE -I. -x assembler -c /tmp/ghc9b19_0/ghc_5.s -o main.o
+Upsweep completely successful.
+*** Deleting temp files:
+Deleting: /tmp/ghc9b19_0/ghc_6.c /tmp/ghc9b19_0/ghc_5.s /tmp/ghc9b19_0/ghc_4.s
+Warning: deleting non-existent /tmp/ghc9b19_0/ghc_6.c
+Warning: deleting non-existent /tmp/ghc9b19_0/ghc_4.s
+link: linkables are ...
+LinkableM (2018-09-23 15:14:03.784076301 UTC) MyModule.MySum
+   [DotO ./MyModule/MySum.o]
+LinkableM (2018-09-23 15:14:03.812076303 UTC) Main
+   [DotO main.o]
+Linking main ...
+*** C Compiler:
+/usr/bin/gcc -fno-stack-protector -DTABLES_NEXT_TO_CODE -c /tmp/ghc9b19_0/ghc_7.c -o /tmp/ghc9b19_0/ghc_8.o -I/usr/lib/ghc/include
+*** C Compiler:
+/usr/bin/gcc -fno-stack-protector -DTABLES_NEXT_TO_CODE -c /tmp/ghc9b19_0/ghc_10.s -o /tmp/ghc9b19_0/ghc_11.o
+*** Linker:
+/usr/bin/gcc -fno-stack-protector -DTABLES_NEXT_TO_CODE '-Wl,--hash-size=31' -Wl,--reduce-memory-overheads -Wl,--no-as-needed -o main -no-pie -Wl,--gc-sections ./MyModule/MySum.o main.o -L/usr/lib/ghc/base-4.9.1.0 -L/usr/lib/ghc/integer-gmp-1.0.0.1 -L/usr/lib/ghc/ghc-prim-0.5.0.0 -L/usr/lib/ghc/rts /tmp/ghc9b19_0/ghc_8.o /tmp/ghc9b19_0/ghc_11.o -Wl,-u,ghczmprim_GHCziTypes_Izh_static_info -Wl,-u,ghczmprim_GHCziTypes_Czh_static_info -Wl,-u,ghczmprim_GHCziTypes_Fzh_static_info -Wl,-u,ghczmprim_GHCziTypes_Dzh_static_info -Wl,-u,base_GHCziPtr_Ptr_static_info -Wl,-u,ghczmprim_GHCziTypes_Wzh_static_info -Wl,-u,base_GHCziInt_I8zh_static_info -Wl,-u,base_GHCziInt_I16zh_static_info -Wl,-u,base_GHCziInt_I32zh_static_info -Wl,-u,base_GHCziInt_I64zh_static_info -Wl,-u,base_GHCziWord_W8zh_static_info -Wl,-u,base_GHCziWord_W16zh_static_info -Wl,-u,base_GHCziWord_W32zh_static_info -Wl,-u,base_GHCziWord_W64zh_static_info -Wl,-u,base_GHCziStable_StablePtr_static_info -Wl,-u,ghczmprim_GHCziTypes_Izh_con_info -Wl,-u,ghczmprim_GHCziTypes_Czh_con_info -Wl,-u,ghczmprim_GHCziTypes_Fzh_con_info -Wl,-u,ghczmprim_GHCziTypes_Dzh_con_info -Wl,-u,base_GHCziPtr_Ptr_con_info -Wl,-u,base_GHCziPtr_FunPtr_con_info -Wl,-u,base_GHCziStable_StablePtr_con_info -Wl,-u,ghczmprim_GHCziTypes_False_closure -Wl,-u,ghczmprim_GHCziTypes_True_closure -Wl,-u,base_GHCziPack_unpackCString_closure -Wl,-u,base_GHCziIOziException_stackOverflow_closure -Wl,-u,base_GHCziIOziException_heapOverflow_closure -Wl,-u,base_ControlziExceptionziBase_nonTermination_closure -Wl,-u,base_GHCziIOziException_blockedIndefinitelyOnMVar_closure -Wl,-u,base_GHCziIOziException_blockedIndefinitelyOnSTM_closure -Wl,-u,base_GHCziIOziException_allocationLimitExceeded_closure -Wl,-u,base_ControlziExceptionziBase_nestedAtomically_closure -Wl,-u,base_GHCziEventziThread_blockedOnBadFD_closure -Wl,-u,base_GHCziWeak_runFinalizzerBatch_closure -Wl,-u,base_GHCziTopHandler_flushStdHandles_closure -Wl,-u,base_GHCziTopHandler_runIO_closure -Wl,-u,base_GHCziTopHandler_runNonIO_closure -Wl,-u,base_GHCziConcziIO_ensureIOManagerIsRunning_closure -Wl,-u,base_GHCziConcziIO_ioManagerCapabilitiesChanged_closure -Wl,-u,base_GHCziConcziSync_runSparks_closure -Wl,-u,base_GHCziConcziSignal_runHandlersPtr_closure -lHSbase-4.9.1.0 -lHSinteger-gmp-1.0.0.1 -lHSghc-prim-0.5.0.0 -lHSrts -lgmp -lm -lrt -ldl -lffi -lpthread
+link: done
+*** Deleting temp files:
+Deleting: /tmp/ghc9b19_0/ghc_13.rsp /tmp/ghc9b19_0/ghc_12.rsp /tmp/ghc9b19_0/ghc_11.o /tmp/ghc9b19_0/ghc_10.s /tmp/ghc9b19_0/ghc_9.rsp /tmp/ghc9b19_0/ghc_8.o /tmp/ghc9b19_0/ghc_7.c
+*** Deleting temp dirs:
+Deleting: /tmp/ghc9b19_0
